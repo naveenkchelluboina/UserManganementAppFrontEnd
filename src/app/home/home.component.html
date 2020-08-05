@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">    
+   <span>My App</span>
+   <span class="example-spacer"></span>
+   <button *ngIf="!_auth.loggedIn()" mat-icon-button routerLink="/login">
+     <span>Login</span>
+   </button>
+   <button *ngIf="!_auth.loggedIn()" mat-icon-button routerLink="/register">
+    <span>Register</span>
+  </button>
+  <button *ngIf="_auth.loggedIn()"  mat-icon-button (click)="_data._navigate()">
+    <span>Mydetails</span>
+  </button>
+  <button *ngIf="_auth.loggedIn()"  mat-icon-button routerLink="/admin">
+    <span>Admin</span>
+  </button>
+  <button *ngIf="_auth.loggedIn()" (click)="_auth.logoutUser()" mat-icon-button>
+    <span>Logout</span>
+  </button>
+
+ </mat-toolbar>
+ <mat-card>Home page</mat-card>

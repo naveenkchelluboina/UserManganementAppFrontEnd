@@ -1,0 +1,24 @@
+
+<div>
+    <mat-card class="example-form">
+        <mat-toolbar color="primary">
+            <span>Login Page</span>
+          </mat-toolbar>
+        
+        <form class="example-form" [formGroup]='myform' (ngSubmit)="submitFrom()" >
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="email" formControlName="email" >
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+                <mat-label>password</mat-label>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+              </mat-form-field>
+              <button mat-raised-button class="example-full-width" >Login</button>
+
+          </form>
+          
+    </mat-card> 
+    {{login|json}}
+</div>

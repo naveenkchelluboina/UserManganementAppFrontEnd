@@ -1,0 +1,34 @@
+<div>
+    <mat-card class="example-form">
+        <mat-toolbar color="primary">
+            <span>Register Email</span>
+        </mat-toolbar>
+        
+        <form class="example-form" [formGroup]="myregisterform" (ngSubmit)="submitRegisterFrom()">          
+
+            <mat-form-field class="example-full-width">
+              <mat-label>email</mat-label>
+              <input matInput placeholder="email" formControlName="email">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>First Name</mat-label>
+                <input matInput placeholder="firstName" formControlName="firstName">
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder="lastName" formControlName="lastName">
+              </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+                <mat-label>password</mat-label>
+                <input matInput type="password" placeholder="Password" formControlName="password">
+            </mat-form-field>
+            
+            <button mat-raised-button class="example-full-width" >Register</button>
+
+          </form>
+          
+    </mat-card> 
+</div>
